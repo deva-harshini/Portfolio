@@ -78,9 +78,12 @@ body {
 
 /* Main content */
 .content {
-  margin-left: 250px;
+  margin-left: 250px; 
   padding: 2rem;
   max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;  
+  text-align: center; 
 }
 
 .hero {
