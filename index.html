@@ -4,17 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Deva Harshini</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>👋 Hi, I'm Deva Harshini</h1>
-    <p>🎓 3rd year B.Tech CSE student | Exploring Data Science, Data Analytics, Software Development & AI/ML</p>
-    <p>🚀 Building projects in Python, JavaScript and Java while learning ML & problem solving</p>
-    <p>💡 Passionate about hackathons, teamwork & turning ideas into working solutions</p>
-  </header>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      <h2>Deva Harshini</h2>
+      <p>Data Science | AI/ML | Software Dev</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+        <li><a href="#achievements"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+    <button class="dark-mode-toggle"><i class="fa-solid fa-moon"></i></button>
+  </aside>
 
-  <main>
+  <!-- Main Content -->
+  <main class="content">
+    <section class="hero" id="hero">
+      <h1>👋 Hi, I'm <span>Deva Harshini</span></h1>
+      <p>🎓 3rd year B.Tech CSE | Exploring Data Science, Data Analytics, Software Development & AI/ML</p>
+      <p>🚀 Building projects in Python, JavaScript and Java while learning ML & problem solving</p>
+      <p>💡 Passionate about hackathons, teamwork & turning ideas into working solutions</p>
+    </section>
+
     <section id="skills">
       <h2>🛠 Skills</h2>
       <ul>
@@ -28,30 +51,25 @@
 
     <section id="projects">
       <h2>📊 Projects</h2>
-
-      <div class="project">
-        <h3>🔹 AI and Software Development</h3>
-        <p><b>ConcenTribe</b> – An AI-powered productivity app tackling content overconsumption & information overload. Built with React, Node.js, MongoDB, and OpenAI APIs. Features personalized recommendations, AI-driven summarization, focus tools, and gamification.</p>
-        <p><a href="#">🔗 ConcenTribe</a></p>
+      <div class="project-card">
+        <h3>🔹 ConcenTribe</h3>
+        <p>An AI-powered productivity app tackling content overconsumption & information overload. Features personalized recommendations, AI-driven summarization, focus tools, and gamification.</p>
+        <a href="#">🔗 View Project</a>
       </div>
-
-      <div class="project">
-        <h3>🔹 Data Analysis and Data Science</h3>
-        <p><b>Titanic Survival Prediction</b> – Built a machine learning pipeline for survival prediction. Applied preprocessing, feature engineering & EDA. Compared multiple models, achieving ~82% accuracy with Random Forest. Kaggle-ready submission generated.</p>
-        <p><i>Tech Stack:</i> Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</p>
-        <p><a href="#">🔗 Titanic Survival Prediction</a></p>
+      <div class="project-card">
+        <h3>🔹 Titanic Survival Prediction</h3>
+        <p>Machine learning pipeline for survival prediction using preprocessing, feature engineering & EDA. Achieved ~82% accuracy with Random Forest.</p>
+        <a href="#">🔗 View Project</a>
       </div>
-
-      <div class="project">
-        <h3>🔹 Software</h3>
-        <p><b>Desktop Tutorial</b> – Case studies made during Software Engineering course.</p>
-        <p><a href="#">🔗 Desktop Tutorial</a></p>
+      <div class="project-card">
+        <h3>🔹 Desktop Tutorial</h3>
+        <p>Case studies made during Software Engineering course.</p>
+        <a href="#">🔗 View Project</a>
       </div>
-
-      <div class="project">
-        <h3>🔹 Case Studies</h3>
-        <p><b>BTech ProjectX</b> – A repository of all case studies completed under faculty guidance during labs.</p>
-        <p><a href="#">🔗 BTech Projects</a></p>
+      <div class="project-card">
+        <h3>🔹 BTech ProjectX</h3>
+        <p>Repository of all case studies completed under faculty guidance during labs.</p>
+        <a href="#">🔗 View Project</a>
       </div>
     </section>
 
@@ -66,14 +84,35 @@
 
     <section id="contact">
       <h2>📬 Connect With Me</h2>
-      <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/mandali-deva-harshini" target="_blank">linkedin.com/in/mandali-deva-harshini</a></p>
-      <p><b>GitHub:</b> <a href="https://github.com/deva-harshini" target="_blank">github.com/deva-harshini</a></p>
-      <p><b>Email:</b> <a href="mailto:devaharshini03@gmail.com">devaharshini03@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/mandali-deva-harshini" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/deva-harshini" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:devaharshini03@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
     </section>
+
+    <footer>
+      <p>© 2025 Deva Harshini | Portfolio</p>
+    </footer>
   </main>
 
-  <footer>
-    <p>© 2025 Deva Harshini | Portfolio</p>
-  </footer>
+  <script>
+    // Dark mode toggle
+    const toggle = document.querySelector('.dark-mode-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.innerHTML = document.body.classList.contains('dark') ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
