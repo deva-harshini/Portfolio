@@ -25,15 +25,17 @@ body {
 
 .sidebar .profile {
   text-align: center;
+  margin-top: 2rem;    /* pushes it down */
 }
 
 .sidebar .profile img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 3px solid #1abc9c;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 
 .sidebar h2 {
   font-size: 1.5rem;
@@ -80,12 +82,14 @@ body {
 
 /* Main content */
 .content {
-  margin-left: 250px; 
+  margin-left: 250px;   /* keeps sidebar space */
   padding: 2rem;
   max-width: 900px;
   margin-right: auto;
-  margin-left: auto;  
+  margin-left: auto;    /* centers content */
+  text-align: center;   /* ensures text & bullets are centered */
 }
+
 
 .hero {
   padding: 3rem 0;
@@ -108,16 +112,25 @@ ul {
   list-style: square;
   margin-left: 1.5rem;
 }
+.content ul {
+  list-style: none;        /* remove default bullets */
+  padding: 0;
+}
+
+.content ul li {
+  margin: 0.5rem 0;
+  text-align: left;        /* keeps items aligned neatly */
+  display: inline-block;   /* keeps them centered in container */
+}
+
 
 /* Project Cards */
 .project-card {
-  background: #fff;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 700px;
+  margin: 1.5rem auto;   /* auto centers */
+  text-align: left;      /* keep content readable */
 }
+
 
 .project-card:hover {
   transform: translateY(-5px);
@@ -137,9 +150,11 @@ ul {
 /* Social Links */
 .social-links {
   display: flex;
-  gap: 1rem;
+  justify-content: center;   /* centers horizontally */
+  gap: 1.5rem;
   margin-top: 1rem;
 }
+
 
 .social-links a {
   font-size: 1.5rem;
