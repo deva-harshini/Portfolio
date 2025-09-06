@@ -25,19 +25,18 @@ body {
 
 .sidebar .profile {
   text-align: center;
-  margin-top: 4rem;      /* move picture further down */
-  margin-bottom: 2rem;   /* spacing before divider/nav */
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .sidebar .profile img {
-  width: 200px;          /* bigger profile picture */
-  height: 200px;
-  border-radius: 80%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;  /* perfect circle */
   border: 5px solid #1abc9c;
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  margin-bottom: 1rem;   /* space between pic and text */
+  margin-bottom: 1rem;
 }
-
 
 .sidebar h2 {
   font-size: 1.5rem;
@@ -84,16 +83,15 @@ body {
 
 /* Main content */
 .content {
-  margin-left: 250px;   /* keeps sidebar space */
+  margin-left: 250px;   /* keep space for sidebar */
   padding: 2rem;
   max-width: 900px;
   margin-right: auto;
-  margin-left: auto;    /* centers content */
-  text-align: center;   /* ensures text & bullets are centered */
+  margin-left: auto;
 }
 
-
 .hero {
+  text-align: center;   /* only hero centered */
   padding: 3rem 0;
   animation: fadeIn 1s ease-in;
 }
@@ -114,25 +112,18 @@ ul {
   list-style: square;
   margin-left: 1.5rem;
 }
-.content ul {
-  list-style: none;        /* remove default bullets */
-  padding: 0;
-}
-
-.content ul li {
-  margin: 0.5rem 0;
-  text-align: left;        /* keeps items aligned neatly */
-  display: inline-block;   /* keeps them centered in container */
-}
-
 
 /* Project Cards */
 .project-card {
+  background: #fff;
+  padding: 1rem;
   max-width: 700px;
-  margin: 1.5rem auto;   /* auto centers */
-  text-align: left;      /* keep content readable */
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 
 .project-card:hover {
   transform: translateY(-5px);
@@ -152,11 +143,10 @@ ul {
 /* Social Links */
 .social-links {
   display: flex;
-  justify-content: center;   /* centers horizontally */
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 1rem;
 }
-
 
 .social-links a {
   font-size: 1.5rem;
