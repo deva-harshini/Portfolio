@@ -1,91 +1,210 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Import Google Font */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  display: flex;
   background: #f9f9f9;
   color: #333;
-  margin: 0;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
-header {
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
   background: #2c3e50;
-  color: white;
-  text-align: center;
+  color: #fff;
   padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-header h1 {
+.sidebar .profile {
+  text-align: center;
+}
+
+.sidebar .profile img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
 }
 
-/* Sections */
-section {
+.sidebar p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.sidebar nav ul li {
+  margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #1abc9c;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* Main content */
+.content {
+  margin-left: 250px;
   padding: 2rem;
   max-width: 900px;
-  margin: auto;
+}
+
+.hero {
+  padding: 3rem 0;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 span {
+  color: #1abc9c;
 }
 
 h2 {
-  margin-bottom: 1rem;
-  color: #2c3e50;
+  margin: 2rem 0 1rem;
   border-bottom: 2px solid #ddd;
   display: inline-block;
   padding-bottom: 0.3rem;
+  color: #2c3e50;
 }
 
-/* Lists */
 ul {
   list-style: square;
   margin-left: 1.5rem;
-  margin-top: 0.5rem;
 }
 
-/* Projects */
-.project {
+/* Project Cards */
+.project-card {
   background: #fff;
   padding: 1rem;
-  margin-bottom: 1.2rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project h3 {
-  color: #34495e;
-  margin-bottom: 0.5rem;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.project a {
-  color: #2980b9;
+.project-card a {
+  color: #1abc9c;
   text-decoration: none;
+  font-weight: 500;
 }
 
-.project a:hover {
+.project-card a:hover {
   text-decoration: underline;
 }
 
-/* Contact Links */
-#contact a {
-  color: #2980b9;
-  text-decoration: none;
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-#contact a:hover {
-  text-decoration: underline;
+.social-links a {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #1abc9c;
 }
 
 /* Footer */
 footer {
-  background: #2c3e50;
-  color: white;
+  margin-top: 2rem;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  background: #2c3e50;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark .sidebar {
+  background: #111;
+}
+
+body.dark h2,
+body.dark .hero h1 span {
+  color: #1abc9c;
+}
+
+body.dark .project-card {
+  background: #2c2c2c;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+body.dark .social-links a {
+  color: #ddd;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+  }
 }
