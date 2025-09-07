@@ -1,118 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Deva Harshini</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <div class="profile">
-      <img src="profile.jpg" alt="Deva Harshini Profile Picture">
-      <h2>Deva Harshini</h2>
-      <p>Data Science | AI/ML | Software Developer | Data Analyst</p>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="profile.jpg" alt="Deva Harshini" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mandali Deva Harshini">Mandali Deva Harshini</h1>
+
+          <p class="title">CSE Student</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:devaharshini03@gmail.com" class="contact-link">devaharshini03@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="ph no:+91 9032052962" class="contact-link">+91 9032052962</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Date of Birth</p>
+
+              <time datetime="1982-06-23">March 03, 2006</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Visakhapatnam, Andhra Pradesh, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+             <a href="https://www.linkedin.com/in/mandali-deva-harshini" target="_blank"><i class="fa-brands fa-linkedin"></i>
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/deva-harshini" target="_blank"><i class="fa-brands fa-github"></i>
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+            
+          </li>
+
+          <li class="social-item">
+             <a href="mailto:devaharshini03@gmail.com"><i class="fa-solid fa-envelope"></i>
+            <ion-icon name="logo-gmail"></ion-icon></a>
+             
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+           I’m a 3rd-year B.Tech Computer Science and Engineering student passionate about using technology to solve real-world problems. My interests span across Data Science, Analytics, Software Development, and AI/ML.I have experience in building projects in Python, Java, and JavaScript, html, css and I’m constantly exploring new tools and frameworks to enhance my skills.
+          </p>
+
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analysis</h4>
+
+                <p class="service-item-text">
+                  Cleaning, exploring, and visualizing datasets using Python, Pandas, and Power BI.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  Development of websites using javascript, mongoDB, react.js, html and css.
+                </p>
+              </div>
+
+            </li>
+
+
+          </ul>
+
+        </section>
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">GITAM University</h4>
+
+              <span>2023 — 2027</span>
+
+              <p class="timeline-text">
+                Currently pursuing 3rd year at XYZ University with focus on Data Science, web development and AI/ML.
+              </p>
+
+            </li>
+
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Projects</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Titanic Survival Prediction</h4>
+
+
+              <p class="timeline-text">
+                Built ML model achieving 82% accuracy using Random Forest
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">ConcenTribe</h4>
+
+              <p class="timeline-text">
+                An AI-powered productivity app tackling content overconsumption & information overload. 
+                Features personalized recommendations, AI-driven summarization, focus tools, and gamification.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cyclistic Data Analysis</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                This project analyzes 12 months of historical trip data from the Cyclistic bike-share program in Chicago.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Data Analysis</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Data Science</h5>
+                <data value="90">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Microsoft Tools</h5>
+                <data value="50">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web development</h5>
+                <data value="50">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Google Tools</h5>
+                <data value="50">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">AI and ML</h5>
+                <data value="50">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+ <!--
+  - #PORTFOLIO
+-->
+
+<article class="portfolio" data-page="portfolio">
+
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
+
+  <section class="projects">
+
+    <!-- Filter Buttons -->
+    <ul class="filter-list">
+
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Web Development</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Data Science</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Data Analysis</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Software</button>
+      </li>
+
+    </ul>
+
+    <!-- Dropdown for smaller screens -->
+    <div class="filter-select-box">
+      <button class="filter-select" data-select>
+        <div class="select-value" data-selecct-value>Select category</div>
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+      </button>
+
+      <ul class="select-list">
+        <li class="select-item"><button data-select-item>All</button></li>
+        <li class="select-item"><button data-select-item>Web Development</button></li>
+        <li class="select-item"><button data-select-item>Data Science</button></li>
+        <li class="select-item"><button data-select-item>Data Analysis</button></li>
+        <li class="select-item"><button data-select-item>Software</button></li>
+      </ul>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
-        <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
-        <li><a href="#achievements"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
-        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
-    <button class="dark-mode-toggle"><i class="fa-solid fa-moon"></i></button>
-  </aside>
 
-  <!-- Main Content -->
-  <main class="content">
-    <section class="hero" id="hero">
-      <h1>👋 Hi, I'm <span>Deva Harshini</span></h1>
-      <p>🎓 3rd year B.Tech CSE | Exploring Data Science, Data Analytics, Software Development & AI/ML</p>
-      <p>🚀 Building projects in Python, JavaScript and Java while learning ML & problem solving</p>
-      <p>💡 Passionate about hackathons, teamwork & turning ideas into working solutions</p>
-    </section>
+    <!-- Project List -->
+    <ul class="project-list">
 
-    <section id="skills">
-      <h2>🛠 Skills</h2>
-      <ul>
-        <li><b>Programming:</b> Python, C, Java, SQL, HTML, CSS, JavaScript</li>
-        <li><b>Data & Analysis:</b> Pandas, NumPy, Matplotlib, Seaborn, Excel</li>
-        <li><b>Development:</b> Git, GitHub, VS Code, Google Colab, Jupyter Notebooks</li>
-        <li><b>CS Fundamentals:</b> Data Structures & Algorithms, DBMS basics, OOPs</li>
-        <li><b>Other Interests:</b> Web Development, Cloud (Azure basics)</li>
-      </ul>
-    </section>
+      <!-- ConcenTribe -->
+      <li class="project-item active" data-filter-item data-category="Web Development">
+        <a href="https://github.com/deva-harshini/ConcenTribe" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/concentribe.png" alt="ConcenTribe Project" loading="lazy">
+          </figure>
+          <h3 class="project-title">ConcenTribe (AI Productivity App)</h3>
+          <p class="project-category">Web Development</p>
+        </a>
+      </li>
 
-    <section id="projects">
-      <h2>📊 Projects</h2>
-      <div class="project-card">
-        <h3>🔹 ConcenTribe</h3>
-        <p>An AI-powered productivity app tackling content overconsumption & information overload. Features personalized recommendations, AI-driven summarization, focus tools, and gamification.</p>
-        <a href="#">🔗 View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>🔹 Titanic Survival Prediction</h3>
-        <p>Machine learning pipeline for survival prediction using preprocessing, feature engineering & EDA. Achieved ~82% accuracy with Random Forest.</p>
-        <a href="#">🔗 View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>🔹 Desktop Tutorial</h3>
-        <p>Case studies made during Software Engineering course.</p>
-        <a href="#">🔗 View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>🔹 BTech ProjectX</h3>
-        <p>Repository of all case studies completed under faculty guidance during labs.</p>
-        <a href="#">🔗 View Project</a>
-      </div>
-    </section>
+      <!-- Titanic Survival Prediction -->
+      <li class="project-item active" data-filter-item data-category="Data Science">
+        <a href="https://github.com/deva-harshini/Titanic-Survival-Prediction" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/titanic.png" alt="Titanic Survival Prediction" loading="lazy">
+          </figure>
+          <h3 class="project-title">Titanic Survival Prediction</h3>
+          <p class="project-category">Data Science</p>
+        </a>
+      </li>
 
-    <section id="achievements">
-      <h2>📌 Achievements & Activities</h2>
-      <ul>
-        <li>Led teams in university projects</li>
-        <li>Completed academic projects in Data Analysis, AI/ML & DBMS</li>
-        <li>Active learner on Kaggle and GitHub</li>
-      </ul>
-    </section>
+      <!-- Cyclistic Growth Analysis -->
+      <li class="project-item active" data-filter-item data-category="Data Analysis">
+        <a href="https://github.com/deva-harshini/Cyclistic-Growth-Analysis" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/cyclistic.png" alt="Cyclistic Growth Analysis" loading="lazy">
+          </figure>
+          <h3 class="project-title">Cyclistic Growth Analysis</h3>
+          <p class="project-category">Data Analysis</p>
+        </a>
+      </li>
 
-    <section id="contact">
-      <h2>📬 Connect With Me</h2>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/mandali-deva-harshini" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/deva-harshini" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="mailto:devaharshini03@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-      </div>
-    </section>
+      <!-- Case Studies -->
+      <li class="project-item active" data-filter-item data-category="Software">
+        <a href="https://github.com/deva-harshini/Btech-ProjectX" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/casestudy.png" alt="Case Studies Project" loading="lazy">
+          </figure>
+          <h3 class="project-title">Case Studies (BTech Projects)</h3>
+          <p class="project-category">Software</p>
+        </a>
+      </li>
 
-    <footer>
-      <p>© 2025 Deva Harshini | Portfolio</p>
-    </footer>
+    </ul>
+
+  </section>
+
+</article>
+
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Mandali Deva Harshini" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="devaharshini03@gmail.com" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Email me" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
   </main>
 
-  <script>
-    // Dark mode toggle
-    const toggle = document.querySelector('.dark-mode-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggle.innerHTML = document.body.classList.contains('dark') ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
-    });
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
